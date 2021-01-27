@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 09:37:49 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 13:19:17 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:37:25 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,11 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	src_length = ft_strlen(src);
 	a = 0;
 	offset = dst_length;
-	while (src[a] != '\0')
+	while (src[a] != '\0' && offset < dstsize - 1)
 	{
 		dst[offset] = src[a];
 		offset++;
 		a++;
-		if (offset == dstsize - 1)
-			break ;
 	}
 	dst[offset] = '\0';
 	return (dst_length + src_length);

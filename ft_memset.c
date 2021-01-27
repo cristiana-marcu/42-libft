@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 10:02:39 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 10:33:09 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 14:00:13 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*p;
 	size_t			a;
 
-	if (!b)
-		return (NULL);
 	p = (unsigned char *)b;
 	a = 0;
 	while (a < len)

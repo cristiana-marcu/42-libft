@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 16:43:13 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/26 14:05:19 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 13:47:14 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,5 @@ char	**ft_split(char const *s, char c)
 		array++;
 		i++;
 	}
-	*array = '\0';
 	return (array);
 }

@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:04:15 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 13:15:53 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:28:46 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,15 @@ size_t
 	size_t a;
 
 	a = 0;
-	if (dstsize > 1)
+	if (dstsize > 0)
 	{
-		while (src[a] != '\0')
+		while (src[a] != '\0' && a < (dstsize - 1))
 		{
-			if (a == dstsize)
-			{
-				a--;
-				break ;
-			}
 			dst[a] = src[a];
 			a++;
 		}
+		dst[a] = '\0';
 	}
-	dst[a] = '\0';
-	a = 0;
 	while (src[a] != '\0')
 		a++;
 	return (a);

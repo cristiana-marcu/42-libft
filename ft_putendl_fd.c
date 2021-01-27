@@ -6,13 +6,13 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 18:29:37 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/22 18:33:17 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 13:48:26 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	t_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

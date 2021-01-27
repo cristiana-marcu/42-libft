@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 09:13:56 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 09:21:17 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:38:16 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strdup(const char *s1)
 	char			*copy;
 	unsigned int	a;
 
-	if (!s1)
-		return (NULL);
 	copy = (char*)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
 	if (!copy)
 		return (NULL);

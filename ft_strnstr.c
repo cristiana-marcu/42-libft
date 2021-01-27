@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 13:37:20 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 13:52:15 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:37:55 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t a;
 	size_t b;
 
-	if (!haystack)
-		return (NULL);
 	if (ft_strlen(needle) == 0)
 		return ((char*)haystack);
 	a = 0;

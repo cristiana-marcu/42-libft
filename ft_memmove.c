@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 11:06:05 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 11:32:31 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:14:41 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*srcchar;
 	size_t	a;
 
-	if (!dst || !src)
-		return (NULL);
 	srcchar = (char *)src;
-	dstchar = (char *)src;
+	dstchar = (char *)dst;
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
 	else

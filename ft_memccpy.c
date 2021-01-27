@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 10:46:43 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/25 10:57:33 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:12:52 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ void
 	char	*dstchar;
 	size_t	a;
 
-	if (!dst || !src)
-		return (NULL);
 	a = 0;
 	srcchar = (char *)src;
-	dstchar = (char *)src;
+	dstchar = (char *)dst;
 	while (a < n)
 	{
 		dstchar[a] = srcchar[a];

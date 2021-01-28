@@ -6,54 +6,54 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 09:46:43 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/27 13:43:22 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/28 12:22:36 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+int		itoa_length(int n)
 {
-	char	tmp;
-	int		length;
-	int		a;
+	int length;
 
-	length = ft_strlen(str);
-	a = 0;
-	while (a < length / 2)
+	length = 0;
+	if (n < 0)
+		length++;
+	if (n == 0)
+		length = 1;
+	while (n != 0)
 	{
-		tmp = str[a];
-		str[a] = str[length - 1 - a];
-		str[length - 1 - a] = tmp;
-		a++;
+		length++;
+		n = n / 10;
 	}
-	return (str);
+	return (length);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		is_neg;
-	int		a;
+	int		length;
 
-	is_neg = 0;
+	length = itoa_length(n);
+	if (!(str = (char *)malloc(sizeof(*str) * (length + 1))))
+		return (NULL);
 	if (n < 0)
 	{
-		is_neg = 1;
+		str[0] = '-';
+		if (n == -2147483648)
+		{
+			str[length - 1] = '8';
+			n = n / 10;
+			length--;
+		}
 		n = -n;
 	}
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
-		return (NULL);
 	if (n == 0)
 		str[0] = '0';
-	a = 0;
-	while (n != 0)
+	while (length >= 0 && n != 0)
 	{
-		str[a] = (n % 10) + '0';
+		str[length-- - 1] = (n % 10) + '0';
 		n = n / 10;
-		a++;
 	}
-	if (is_neg)
-		str[a] = '-';
-	return (ft_strrev(str));
+	return (str);
 }

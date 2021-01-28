@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 18:09:38 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/26 09:38:28 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/28 10:55:27 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_atoi(const char *str)
 	a = 0;
 	is_neg = 0;
 	number = 0;
-	if (!str)
-		return (0);
 	while (str[a] == '\t' || str[a] == '\n' || str[a] == '\v' ||
 	str[a] == '\f' || str[a] == '\r' || str[a] == ' ')
 		a++;

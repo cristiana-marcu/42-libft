@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 16:05:31 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/22 16:55:43 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/29 13:16:16 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1)
+		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && is_char_in_set(s1[start], set))
 		start++;

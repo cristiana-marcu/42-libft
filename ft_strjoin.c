@@ -6,7 +6,7 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 13:25:44 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/01/28 12:22:56 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/01/29 13:15:29 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		a;
 	int		b;
 
+	if (!s1 || !s2)
+		return (NULL);
 	p = (char*)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!p)
 		return (NULL);

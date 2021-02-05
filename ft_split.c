@@ -6,13 +6,13 @@
 /*   By: cmarcu <cmarcu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 16:43:13 by cmarcu            #+#    #+#             */
-/*   Updated: 2021/02/01 09:51:02 by cmarcu           ###   ########.fr       */
+/*   Updated: 2021/02/05 09:48:55 by cmarcu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_mountarray(char const *s, char c)
+static char	**ft_mountarray(char const *s, char c)
 {
 	size_t	result;
 	char	*aux;
@@ -34,7 +34,7 @@ char	**ft_mountarray(char const *s, char c)
 	return (array);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
